@@ -8,12 +8,12 @@ import (
 )
 
 func init() {
-	httpcaddyfile.RegisterHandlerDirective("redertron", parseCaddyfile)
+	httpcaddyfile.RegisterHandlerDirective("rendertron", parseCaddyfile)
 }
 
 // parseCaddyfile sets up the handler from Caddyfile tokens. Syntax:
 //
-//		redertron [<matcher>] <url> {
+//		rendertron [<matcher>] <url> {
 //			excludeUrlPattern <pattern>
 // 			userAgentPattern <pattern>
 //			timeout <timeout>
@@ -32,7 +32,7 @@ func parseCaddyfile(h httpcaddyfile.Helper) (caddyhttp.MiddlewareHandler, error)
 
 // UnmarshalCaddyfile implements caddyfile.Unmarshaler. Syntax:
 //
-//		redertron [<matcher>] <url> {
+//		rendertron [<matcher>] <url> {
 //			excludeUrlPattern <pattern>
 // 			userAgentPattern <pattern>
 //			timeout <timeout>
